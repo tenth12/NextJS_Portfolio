@@ -5,11 +5,11 @@ interface Portfolio {
   id: string; // ใช้ ID เพื่อระบุข้อมูลแต่ละชิ้น
   firstName: string;
   lastName: string;
-  address: string;
+  address?: string;
   phone: string;
   school: string;
   gpa: number;
-  specialSkills: string;
+  specialSkills?: string;
   reasonForApplying: string;
   selectedMajor: string;
   university: string;

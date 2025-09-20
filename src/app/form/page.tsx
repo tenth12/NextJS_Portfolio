@@ -16,7 +16,7 @@ export default function PortfolioForm() {
   const [awardImages, setAwardImages] = useState<string[]>([]);
   const [workImages, setWorkImages] = useState<string[]>([]);
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: Portfolio) => {
     const fullData = {
       ...data,
       gpa: parseFloat(data.gpa),
@@ -60,7 +60,8 @@ export default function PortfolioForm() {
               </div>
               <div className="md:col-span-2">
                 <label htmlFor="address" className={labelClasses}>ที่อยู่:</label>
-                <input id="address" {...register('address')} className={inputClasses} />
+                <input id="address" {...register('address', { required: 'กรุณากรอกที่อยู่' })} className={inputClasses} />
+                {errors.address && <p className={errorClasses}>{errors.address.message?.toString()}</p>}
               </div>
               <div>
                 <label htmlFor="phone" className={labelClasses}>หมายเลขโทรศัพท์:</label>
