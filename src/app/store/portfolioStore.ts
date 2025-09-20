@@ -13,7 +13,7 @@ export interface Portfolio {
   reasonForApplying: string;
   selectedMajor: string;
   university: string;
-  profileImageUrl?: string;
+  profileImageUrl?: string | null;
   activityImages?: string[];
   awardImages?: string[];
   workImages?: string[];
