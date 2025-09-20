@@ -7,8 +7,9 @@ import ImageUploader from '@/app/components/ImageUploader';
 import { useState } from 'react';
 
 export default function PortfolioForm() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm<Portfolio>();
   const addPortfolio = usePortfolioStore((state) => state.addPortfolio);
+  
   const router = useRouter();
 
   const [profileImage, setProfileImage] = useState<string | null>(null);
