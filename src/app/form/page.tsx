@@ -1,7 +1,7 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
-import { usePortfolioStore } from '@/app/store/portfolioStore';
+import { Portfolio, usePortfolioStore } from '@/app/store/portfolioStore';
 import { useRouter } from 'next/navigation';
 import ImageUploader from '@/app/components/ImageUploader';
 import { useState } from 'react';
