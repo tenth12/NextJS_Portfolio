@@ -19,7 +19,7 @@ export default function PortfolioForm() {
   const onSubmit = (data: Portfolio) => {
     const fullData = {
       ...data,
-      gpa: parseFloat(data.gpa),
+      gpa: parseFloat(String(data.gpa)),
       profileImageUrl: profileImage,
       activityImages,
       awardImages,
